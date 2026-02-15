@@ -1,124 +1,125 @@
 <!DOCTYPE html>
-<html>
+<html lang="id">
 <head>
-    <title>Website Belajar Saya</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RTP LIVE TERUPDATE</title>
     <style>
-        /* 1. Aturan Dasar Layar (Tema Gelap) */
         body {
-    background-image: url('bg-utama.jpg'); /* Pastikan nama file sama persis */
-    background-size: cover;                /* Gambar menutupi seluruh layar */
-    background-attachment: fixed;          /* Background tidak ikut tergeser saat discroll */
-    background-position: center;           /* Gambar di posisi tengah */
-    color: white;
-     }
-        /* 2. Rak Utama (Grid) supaya game berjejer ke samping */
+            background-color: #0b0b0b; /* Warna dasar hitam */
+            background-image: url('bgutama.jpg'); /* Ganti dengan nama file gambar backgroundmu */
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
+            color: white;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+
         .container-game {
-            display: flex; 
-            flex-wrap: wrap; 
-            justify-content: center; 
-            gap: 20px; 
-            padding: 40px 20px;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            padding: 20px;
         }
-        /* 3. Kotak Bingkai Merah (Card) seperti gambar target */
+
         .card-game {
-            background-color: #1a1a1a;
-            border: 2px solid #ff0000; 
+            background: #1a1a1a;
+            border: 2px solid red;
             border-radius: 15px;
-            width: 250px; 
+            width: 300px;
             padding: 15px;
-            box-shadow: 0px 0px 15px rgba(255, 0, 0, 0.4); 
-            transition: 0.3s;
+            box-shadow: 0 0 15px rgba(255, 0, 0, 0.5);
         }
-        /* Efek saat kursor menyentuh kotak */
-        .card-game:hover {
-            transform: scale(1.05);
-            box-shadow: 0px 0px 25px rgba(255, 0, 0, 0.7);
-        }
+
         .card-game img {
             width: 100%;
             border-radius: 10px;
-            margin-bottom: 10px;
         }
-        /* Bar Persentase RTP Hijau */
+
         .rtp-bar {
-            background-color: #333;
+            background: #333;
             border-radius: 20px;
-            margin: 15px 0;
+            margin: 10px 0;
             padding: 8px;
-            color: #00ff00; 
+            color: #00ff00;
             font-weight: bold;
-            font-size: 18px;
-            border: 1px solid #444;
         }
-        /* Tombol Main Sekarang */
-       .btn-main {
-    background-color: red; /* Warna tombol merah */
-    color: white;          /* TULISAN HARUS PUTIH AGAR MUNCUL */
-    padding: 10px 20px;
-    border: none;
-    border-radius: 20px;
-    font-weight: bold;
-    cursor: pointer;
-    width: 100%;
-    margin-top: 10px;
-     }
-        /* Efek saat tombol disentuh/diklik */
-.btn-main:hover {
-    transform: scale(1.05);      /* Tombol sedikit membesar */
-    background-color: #ffde00;  /* Berubah jadi kuning */
-    color: black;               /* Tulisan jadi hitam agar terbaca */
-    box-shadow: 0 0 15px #ffde00; /* Memberikan efek cahaya bersinar */
-    }
+
+        /* Tombol Utama & Animasi */
+        .btn-main {
+            background-color: red;
+            color: white;
+            padding: 12px;
+            border: none;
+            border-radius: 20px;
+            font-weight: bold;
+            cursor: pointer;
+            width: 100%;
+            transition: 0.3s;
+        }
+
+        .btn-main:hover {
+            transform: scale(1.05);
+            background-color: #ffde00;
+            color: black;
+            box-shadow: 0 0 20px #ffde00;
+        }
+
+        marquee {
+            background: rgba(0, 0, 0, 0.7);
+            padding: 10px;
+            border-top: 2px solid red;
+            border-bottom: 2px solid red;
+        }
     </style>
 </head>
 <body>
 
-   <h1 style="margin-top: 30px; color: #ff0000;">PRAGMATIC PLAY SLOT LIVE RTP</h1>
+    <h1 style="color: red; margin-top: 30px;">PRAGMATIC PLAY SLOT LIVE RTP</h1>
 
-  <marquee style="color: yellow; font-weight: bold; font-size: 20px; background: rgba(0,0,0,0.5); padding: 5px;">
-    🔥 SELAMAT DATANG DI RTP LIVE TERPERCAYA - MENANG BERAPAPUN PASTI DIBAYAR LUNAS! 🔥
-  </marquee>
+    <marquee scrollamount="7">
+        <span style="color: yellow; font-weight: bold; font-size: 20px;">
+            🔥 SELAMAT DATANG DI RTP LIVE TERPERCAYA - MENANG BERAPAPUN PASTI DIBAYAR LUNAS! 🔥
+        </span>
+    </marquee>
 
-  <p>Update Terupdate: <span id="tgl-otomatis" ...></span></p>
-  <script>
-    function updateWaktu() {
-        const d = new Date();
-        const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
-        document.getElementById("tgl-otomatis").innerHTML = d.toLocaleDateString('id-ID', options);
-    }
-    updateWaktu();
-</script>
+    <p>Update Terupdate: <span id="tgl-otomatis" style="color: yellow; font-weight: bold;"></span></p>
 
     <div class="container-game">
-
-        <div class="card-game" style="position: relative;">
-            <span style="position: absolute; background: red; color: white; padding: 12px 12px; font-size: 15px; font-weight: bold; border-radius: 5px; top: 10px; left: 10px; z-index: 1;">HOT</span>
-            <img src="MJ2.jpg"> 
+        <div class="card-game">
+            <img src="MJ2.jpg" alt="Mahjong Ways 2">
             <h3>MAHJONG WAYS 2</h3>
             <div class="rtp-bar">RTP 98%</div>
-         <button class="btn-main" onclick="window.location.href='https://alexisovena.com'">
-            MAIN SEKARANG
-         </button>
+            <button class="btn-main" onclick="window.location.href='https://alexisovena.com'">MAIN SEKARANG</button>
         </div>
 
-        <div class="card-game" style="position: relative;">
-            <span style="position: absolute; background: red; color: white; padding: 12px 12px; font-size: 15px; font-weight: bold; border-radius: 5px; top: 10px; left: 10px; z-index: 1;">HOT</span>
-            <img src="gateo.jpg" style="width: 100%; height: 170px; object-fit: cover; border-radius: 10px;">
+        <div class="card-game">
+            <img src="gateo.jpg" alt="Gates of Olympus">
             <h3>GATES OF OLYMPUS</h3>
             <div class="rtp-bar">RTP 95%</div>
-          <button class="btn-main" onclick="window.location.href='https://alexisovena.com'">
-             MAIN SEKARANG
-          </button>
+            <button class="btn-main" onclick="window.location.href='https://alexisovena.com'">MAIN SEKARANG</button>
         </div>
 
-        <div class="card-game"style="position: relative;">
-            <span style="position: absolute; background: red; color: white; padding: 12px 12px; font-size: 15px; font-weight: bold; border-radius: 5px; top: 10px; left: 10px; z-index: 1;">HOT</span>
-            <img src="starlp.jpg">
+        <div class="card-game">
+            <img src="starlp.jpg" alt="Starlight Princess">
             <h3>STARLIGHT PRINCESS</h3>
             <div class="rtp-bar">RTP 92%</div>
-           <button class="btn-main" onclick="window.location.href='https://alexisovena.com'">
-              MAIN SEKARANG
-           </button>
+            <button class="btn-main" onclick="window.location.href='https://alexisovena.com'">MAIN SEKARANG</button>
         </div>
+    </div>
+
+    <script>
+        function updateWaktu() {
+            const d = new Date();
+            const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+            document.getElementById("tgl-otomatis").innerHTML = d.toLocaleDateString('id-ID', options);
+        }
+        updateWaktu();
+    </script>
+
 </body>
 </html>
