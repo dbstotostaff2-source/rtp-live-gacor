@@ -18,46 +18,6 @@
     margin: 0; 
     padding: 0;  
 }
-   .hot-label {
-    position: absolute; top: 10px; left: 10px;
-    background: linear-gradient(45deg, red, #ff4d4d, red);
-    color: white; padding: 2px 8px; border-radius: 5px;
-    font-weight: bold; font-size: 10px;
-    overflow: hidden; 
-    z-index: 10;
-}
-
-.hot-label::after {
-    content: '';
-    position: absolute; top: 0; left: -100%;
-    width: 60%; height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.7), transparent);
-    transform: skewX(-20deg);
-    animation: shine 3s infinite; 
-}
-
-@keyframes shine {
-    0% { left: -100%; }
-    20% { left: 100%; }
-    100% { left: 100%; }
-}
-
-.ritme-container { margin-top: 8px; display: flex; align-items: center; justify-content: center; gap: 4px; }
-.dot { width: 6px; height: 6px; border-radius: 50%; display: inline-block; animation: pulse-ritme 1.5s infinite alternate; }
-.red { background: #ff0000; box-shadow: 0 0 5px #ff0000; }
-.yellow { background: #ccff00; box-shadow: 0 0 5px #ccff00; }
-.grey { background: #444; }
-
-@keyframes pulse-ritme {
-    from { opacity: 0.3; transform: scale(0.8); }
-    to { opacity: 1; transform: scale(1.1); }
-}
-
-@keyframes shine {
-    0% { left: -100%; }
-    20% { left: 100%; }
-    100% { left: 100%; }
-}
         }
         @media (max-width: 600px) {
     .container { 
@@ -73,6 +33,7 @@
     .card-game h3 { font-size: 11px; margin: 5px 0; }
     .btn-main { font-size: 10px; padding: 8px 2px; }
     .rtp-bar { font-size: 12px; }
+}
 }
         .header { background: rgba(139, 0, 0, 0.8); padding: 20px; border-bottom: 2px solid red; }
         .running-text { background: black; color: yellow; padding: 10px; font-weight: bold; border-bottom: 1px solid red; }
@@ -117,39 +78,19 @@
     z-index: 9999; font-size: 13px; color: white;
     box-shadow: 0 0 10px rgba(255,215,0,0.5);
 }
-.pulse-effect { 
-    color: #ccff00 !important; 
-    text-shadow: 0 0 20px #ccff00;
-    transform: scale(1.2); 
-    transition: 0.3s; 
+     .btn-main:hover {
+       background: #ccff00; 
+       color: black; 
+       box-shadow: 0 0 15px #ccff00; 
+       transform: scale(1.05); 
 }
-.btn-main:hover {
-    background: #ccff00 !important; 
-    color: black !important; 
-    box-shadow: 0 0 20px #ccff00; 
-    transform: scale(1.05);
-    transition: 0.3s;
-}
-  .wa-float {
+        .wa-float {
             position: fixed; width: 60px; height: 60px; bottom: 20px; right: 20px;
             background-color: #25d366; color: white; border-radius: 50px;
             text-align: center; font-size: 20px; display: flex; align-items: center;
             justify-content: center; text-decoration: none; z-index: 10000;
             font-weight: bold; box-shadow: 2px 2px 10px rgba(0,0,0,0.5);
         }
-        .ritme-container { margin-top: 5px; display: flex; align-items: center; justify-content: center; gap: 4px; }
-.dot { width: 6px; height: 6px; border-radius: 50%; display: inline-block; animation: pulse-ritme 1.5s infinite alternate; }
-.red { background: #ff0000; box-shadow: 0 0 5px #ff0000; }
-.yellow { background: #ccff00; box-shadow: 0 0 5px #ccff00; }
-.grey { background: #444; }
-
-@keyframes pulse-ritme {
-    from { opacity: 0.4; transform: scale(0.8); }
-    to { opacity: 1; transform: scale(1.1); }
-}
-.dot:nth-child(2) { animation-delay: 0.3s; }
-.dot:nth-child(3) { animation-delay: 0.6s; }
-.dot:nth-child(4) { animation-delay: 0.9s; }
     </style>
 </head>
 <body>
@@ -167,13 +108,6 @@
             <div class="rtp-bar">RTP <span id="rtp1" class="rtp-num">98</span>%</div>
             <button class="btn-main" onclick="window.location.href='https://alexisovena.com'">MAIN SEKARANG</button>
         </div>
-        <div class="ritme-container">
-    <small style="font-size: 10px; color: #aaa;">Ritme:</small>
-    <span class="dot red"></span>
-    <span class="dot yellow"></span>
-    <span class="dot grey"></span>
-    <span class="dot red"></span>
-    </div>
 
         <div class="card-game">
             <span class="hot-label">HOT</span>
@@ -182,13 +116,6 @@
             <div class="rtp-bar">RTP <span id="rtp2" class="rtp-num">95</span>%</div>
             <button class="btn-main" onclick="window.location.href='https://alexisovena.com'">MAIN SEKARANG</button>
         </div>
-        <div class="ritme-container">
-    <small style="font-size: 10px; color: #aaa;">Ritme:</small>
-    <span class="dot red"></span>
-    <span class="dot yellow"></span>
-    <span class="dot grey"></span>
-    <span class="dot red"></span>
-    </div>
 
         <div class="card-game">
             <span class="hot-label">HOT</span>
@@ -197,14 +124,6 @@
             <div class="rtp-bar">RTP <span id="rtp3" class="rtp-num">92</span>%</div>
             <button class="btn-main" onclick="window.location.href='https://alexisovena.com'">MAIN SEKARANG</button>
         </div>
-        <div class="ritme-container">
-    <small style="font-size: 10px; color: #aaa;">Ritme:</small>
-    <span class="dot red"></span>
-    <span class="dot yellow"></span>
-    <span class="dot grey"></span>
-    <span class="dot red"></span>
-    </div>
-        
     </div>
     <div id="notif-win">
     <span style="color: gold; font-weight: bold;">🎉 JACKPOT!</span><br>
@@ -221,23 +140,18 @@
             const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
             document.getElementById("tgl-otomatis").innerHTML = "Update Terupdate: " + d.toLocaleDateString('id-ID', options);
         }
-        <script>
-    function gantiRTP() {
-        const ids = ["rtp1", "rtp2", "rtp3"];
-        ids.forEach(id => {
-            const el = document.getElementById(id);
-            if(el) {
-                let angka = Math.floor(Math.random() * (98 - 89 + 1)) + 89;
-                el.innerHTML = angka;
-                
-                el.classList.add('pulse-effect');
-                setTimeout(() => el.classList.remove('pulse-effect'), 500);
-            }
-        });
-    }
-    setInterval(gantiRTP, 5000); 
-    setInterval(munculNotif, 8000); 
-    gantiRTP(); 
+
+        function gantiRTP() {
+    const ids = ["rtp1", "rtp2", "rtp3"];
+    ids.forEach(id => {
+        const el = document.getElementById(id);
+        if(el) {
+            let angka = Math.floor(Math.random() * (98 - 89 + 1)) + 89;
+            el.innerHTML = angka;
+            el.classList.add('pulse-effect');
+            setTimeout(() => el.classList.remove('pulse-effect'), 500);
+        }
+    });
 }
 
 function munculNotif() {
