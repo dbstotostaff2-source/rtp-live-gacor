@@ -4,14 +4,13 @@
     <title>Website Belajar Saya</title>
     <style>
         /* 1. Aturan Dasar Layar (Tema Gelap) */
-        body { 
-            background-color: #0b0b0b; 
-            color: white; 
-            font-family: sans-serif;
-            text-align: center;
-            margin: 0;
-            padding: 0;
-        }
+        body {
+    background-image: url('bg-utama.jpg'); /* Pastikan nama file sama persis */
+    background-size: cover;                /* Gambar menutupi seluruh layar */
+    background-attachment: fixed;          /* Background tidak ikut tergeser saat discroll */
+    background-position: center;           /* Gambar di posisi tengah */
+    color: white;
+     }
         /* 2. Rak Utama (Grid) supaya game berjejer ke samping */
         .container-game {
             display: flex; 
@@ -62,15 +61,26 @@
     cursor: pointer;
     width: 100%;
     margin-top: 10px;
-}
+     }
+        /* Efek saat tombol disentuh/diklik */
+.btn-main:hover {
+    transform: scale(1.05);      /* Tombol sedikit membesar */
+    background-color: #ffde00;  /* Berubah jadi kuning */
+    color: black;               /* Tulisan jadi hitam agar terbaca */
+    box-shadow: 0 0 15px #ffde00; /* Memberikan efek cahaya bersinar */
+    }
     </style>
 </head>
 <body>
 
-    <h1 style="margin-top: 30px; color: #ff0000;">PRAGMATIC PLAY SLOT LIVE RTP</h1>
-    <p>Update Terupdate: <span id="tgl-otomatis" style="font-weight: bold; color: yellow;"></span></p>
+   <h1 style="margin-top: 30px; color: #ff0000;">PRAGMATIC PLAY SLOT LIVE RTP</h1>
 
-<script>
+  <marquee style="color: yellow; font-weight: bold; font-size: 20px; background: rgba(0,0,0,0.5); padding: 5px;">
+    🔥 SELAMAT DATANG DI RTP LIVE TERPERCAYA - MENANG BERAPAPUN PASTI DIBAYAR LUNAS! 🔥
+  </marquee>
+
+  <p>Update Terupdate: <span id="tgl-otomatis" ...></span></p>
+  <script>
     function updateWaktu() {
         const d = new Date();
         const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
