@@ -155,28 +155,37 @@
         </div>
     </div>
 
-    <script>
-       function updateWaktu() {
-    const d = new Date();
-    const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
-    document.getElementById("tgl-otomatis").innerHTML = d.toLocaleDateString('id-ID', options);
-}
-function gantiRTP() {
-    const ids = ["rtp1", "rtp2", "rtp3"];
-    ids.forEach(id => {
-        const elemen = document.getElementById(id);
-        if (elemen) {
-            let angkaBaru = Math.floor(Math.random() * (98 - 89 + 1)) + 89;
-            elemen.innerHTML = angkaBaru;
+  <script>
+        function updateWaktu() {
+            const d = new Date();
+            const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+            const elemenTgl = document.getElementById("tgl-otomatis");
+            if (elemenTgl) {
+                elemenTgl.innerHTML = d.toLocaleDateString('id-ID', options);
+            }
         }
-    });
-}
-updateWaktu();
-setInterval(gantiRTP, 5000);
+
+        function gantiRTP() {
+            const ids = ["rtp1", "rtp2", "rtp3"];
+            ids.forEach(id => {
+                const elemen = document.getElementById(id);
+                if (elemen) {
+                    // Mengacak angka antara 89 sampai 98
+                    let angkaBaru = Math.floor(Math.random() * (98 - 89 + 1)) + 89;
+                    elemen.innerHTML = angkaBaru;
+                }
+            });
+        }
+
+        // Jalankan semua fungsi
+        updateWaktu();
+        gantiRTP(); // Jalankan sekali saat start
+        setInterval(gantiRTP, 5000); // Ulangi setiap 5 detik
+    </script>
+
     <a href="https://wa.me/6281234567890?text=Halo%20Admin" class="wa-float" target="_blank">
         WA
     </a>
 
-   
 </body>
 </html>
