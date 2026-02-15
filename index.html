@@ -50,17 +50,22 @@
         }
 
         /* Tombol Utama & Animasi */
-        .btn-main {
-            background-color: red;
-            color: white;
-            padding: 12px;
-            border: none;
-            border-radius: 20px;
-            font-weight: bold;
-            cursor: pointer;
-            width: 100%;
-            transition: 0.3s;
-        }
+       .btn-main {
+    background-color: red;
+    color: white;
+    padding: 12px 0;        /* Padding atas-bawah 12px, kiri-kanan 0 */
+    line-height: 1;         /* Memaksa tinggi baris teks jadi standar */
+    display: flex;          /* Mengaktifkan mode flexbox */
+    align-items: center;    /* Teks pas di tengah secara vertikal */
+    justify-content: center;/* Teks pas di tengah secara horizontal */
+    border: none;
+    border-radius: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 10px;
+    transition: 0.3s;
+}
 
         .btn-main:hover {
             transform: scale(1.05);
