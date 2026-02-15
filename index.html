@@ -18,6 +18,28 @@
     margin: 0; 
     padding: 0;  
 }
+     .hot-label {
+    position: absolute; top: 10px; left: 10px;
+    background: linear-gradient(45deg, red, #ff4d4d, red);
+    color: white; padding: 2px 8px; border-radius: 5px;
+    font-weight: bold; font-size: 12px;
+    overflow: hidden; 
+    z-index: 10;
+}
+.hot-label::after {
+    content: '';
+    position: absolute; top: 0; left: -100%;
+    width: 50%; height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.6), transparent);
+    transform: skewX(-25deg);
+    animation: shine 3s infinite;
+}
+
+@keyframes shine {
+    0% { left: -100%; }
+    20% { left: 100%; }
+    100% { left: 100%; }
+}
         }
         @media (max-width: 600px) {
     .container { 
@@ -90,13 +112,26 @@
     transform: scale(1.05);
     transition: 0.3s;
 }
-        .wa-float {
+  .wa-float {
             position: fixed; width: 60px; height: 60px; bottom: 20px; right: 20px;
             background-color: #25d366; color: white; border-radius: 50px;
             text-align: center; font-size: 20px; display: flex; align-items: center;
             justify-content: center; text-decoration: none; z-index: 10000;
             font-weight: bold; box-shadow: 2px 2px 10px rgba(0,0,0,0.5);
         }
+        .ritme-container { margin-top: 5px; display: flex; align-items: center; justify-content: center; gap: 4px; }
+.dot { width: 6px; height: 6px; border-radius: 50%; display: inline-block; animation: pulse-ritme 1.5s infinite alternate; }
+.red { background: #ff0000; box-shadow: 0 0 5px #ff0000; }
+.yellow { background: #ccff00; box-shadow: 0 0 5px #ccff00; }
+.grey { background: #444; }
+
+@keyframes pulse-ritme {
+    from { opacity: 0.4; transform: scale(0.8); }
+    to { opacity: 1; transform: scale(1.1); }
+}
+.dot:nth-child(2) { animation-delay: 0.3s; }
+.dot:nth-child(3) { animation-delay: 0.6s; }
+.dot:nth-child(4) { animation-delay: 0.9s; }
     </style>
 </head>
 <body>
@@ -114,6 +149,13 @@
             <div class="rtp-bar">RTP <span id="rtp1" class="rtp-num">98</span>%</div>
             <button class="btn-main" onclick="window.location.href='https://alexisovena.com'">MAIN SEKARANG</button>
         </div>
+        <div class="ritme-container">
+    <small style="font-size: 10px; color: #aaa;">Ritme:</small>
+    <span class="dot red"></span>
+    <span class="dot yellow"></span>
+    <span class="dot grey"></span>
+    <span class="dot red"></span>
+    </div>
 
         <div class="card-game">
             <span class="hot-label">HOT</span>
@@ -122,6 +164,13 @@
             <div class="rtp-bar">RTP <span id="rtp2" class="rtp-num">95</span>%</div>
             <button class="btn-main" onclick="window.location.href='https://alexisovena.com'">MAIN SEKARANG</button>
         </div>
+        <div class="ritme-container">
+    <small style="font-size: 10px; color: #aaa;">Ritme:</small>
+    <span class="dot red"></span>
+    <span class="dot yellow"></span>
+    <span class="dot grey"></span>
+    <span class="dot red"></span>
+    </div>
 
         <div class="card-game">
             <span class="hot-label">HOT</span>
@@ -130,6 +179,14 @@
             <div class="rtp-bar">RTP <span id="rtp3" class="rtp-num">92</span>%</div>
             <button class="btn-main" onclick="window.location.href='https://alexisovena.com'">MAIN SEKARANG</button>
         </div>
+        <div class="ritme-container">
+    <small style="font-size: 10px; color: #aaa;">Ritme:</small>
+    <span class="dot red"></span>
+    <span class="dot yellow"></span>
+    <span class="dot grey"></span>
+    <span class="dot red"></span>
+    </div>
+        
     </div>
     <div id="notif-win">
     <span style="color: gold; font-weight: bold;">🎉 JACKPOT!</span><br>
